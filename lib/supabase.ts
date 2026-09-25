@@ -6,7 +6,7 @@ export const createSupabaseClient = () => {
         process.env.NEXT_PUBLIC_SUPABASE_URL!,
         process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY!, {
             async accessToken() {
-                console.log('TOKEN:', await (await auth()).getToken());
+                
                 return ((await auth()).getToken());
             }
         }
