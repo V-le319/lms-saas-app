@@ -14,7 +14,8 @@ const Searchinput = () => {
         const [searchQuery, setSearchQuery] = useState('');
 
         useEffect(() => {
-    if (searchQuery) {
+            const delayDebounceFn = setTimeout(() => {
+                    if (searchQuery) {
         const newUrl = formUrlQuery({
             params: searchParams.toString(),
             key: "topic",
@@ -25,11 +26,12 @@ const Searchinput = () => {
         if(pathname === '/companions') {
             const newUrl = removeKeysFromUrlQuery({
                 params: searchParams.toString(),
-                keysToRemove: ["your_query_key"],
+                keysToRemove: ["topic"],
             });
             router.push(newUrl, { scroll: false });
         }  
     }
+            }, 500 )
 
 }, [searchQuery, router, searchParams, pathname]);
 
@@ -38,7 +40,7 @@ const Searchinput = () => {
         <Image src="/icons/search.svg" alt="search" 
                 width={15}
                 height={15}
-        />
+         />
 
         <input placeholder="Search companions ..."
         className="outline-none"
