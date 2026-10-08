@@ -141,7 +141,8 @@ const CompanionComponent = ({ companionId, subject, topic, name, userName, userI
                     </p>
                 </div>
 
-                    <button className='btn-mic' onClick={toggleMicrophone}>
+                    <button className='btn-mic' onClick={toggleMicrophone}
+                                                disabled={callStatus !== CallStatus.ACTIVE}>
                          <Image src={isMuted ? '/icons/mic-off.svg' : '/icons/mic-on.svg'}
                                 alt="mic"
                                 width={36}
@@ -167,10 +168,10 @@ const CompanionComponent = ({ companionId, subject, topic, name, userName, userI
 
         <section className="transcript">
                 <div className='transcript-message no-scrollbar'>
-                     {messages.map((message) => {
+                     {messages.map((message, index) => {
                         if(message.role === 'assistant') {
                             return (
-                              <p key={message.content}
+                              <p key={index}
                                 className='max-sm:text-sm'>
                                 {name.split(' ')[0].replace('/[.,]/g', '')}
 
@@ -178,11 +179,12 @@ const CompanionComponent = ({ companionId, subject, topic, name, userName, userI
                                 </p>
                                     )
                          } else {
-                            return
-                            <p key={message.content}
+                            return (
+                            <p key={index}
                                 className='text-primary max-sm:text-sm'>
                                 {userName} : {message.content}
                             </p>
+                            )
                          }
                         })}
                 </div>

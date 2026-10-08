@@ -1,0 +1,35 @@
+npm error code ERESOLVE
+npm error ERESOLVE could not resolve
+npm error
+npm error While resolving: lottie-react@2.4.0
+npm error Found: react@19.2.8
+npm error node_modules/react
+npm error   peer react@"^17 || ^18 || ^19" from @base-ui/react@1.8.0
+npm error   node_modules/@base-ui/react
+npm error     @base-ui/react@"^1.8.0" from the root project
+npm error   peer react@"^17 || ^18 || ^19" from @base-ui/utils@0.4.0
+npm error   node_modules/@base-ui/utils
+npm error     @base-ui/utils@"0.4.0" from @base-ui/react@1.8.0
+npm error     node_modules/@base-ui/react
+npm error       @base-ui/react@"^1.8.0" from the root project
+npm error   16 more (@clerk/nextjs, @clerk/react, @clerk/shared, ...)
+npm error
+npm error Could not resolve dependency:
+npm error peer react@"^16.8.0 || ^17.0.0 || ^18.0.0" from lottie-react@2.4.0
+npm error node_modules/lottie-react
+npm error   lottie-react@"^2.4.0" from the root project
+npm error
+npm error Conflicting peer dependency: react@18.3.1
+npm error node_modules/react
+npm error   peer react@"^16.8.0 || ^17.0.0 || ^18.0.0" from lottie-react@2.4.0
+npm error   node_modules/lottie-react
+npm error     lottie-react@"^2.4.0" from the root project
+npm error
+npm error Fix the upstream dependency conflict, or retry
+npm error this command with --force or --legacy-peer-deps
+npm error to accept an incorrect (and potentially broken) dependency resolution.
+npm error
+npm error
+npm error For a full report see:
+npm error C:\Users\Administrator\AppData\Local\npm-cache\_logs\2026-10-08T07_44_03_284Z-eresolve-report.txt
+npm error A complete log of this run can be found in: C:\Users\Administrator\AppData\Local\npm-cache\_logs\2026-10-08T07_44_03_284Z-debug-0.log
