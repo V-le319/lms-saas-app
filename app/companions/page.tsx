@@ -1,7 +1,6 @@
 import CompanionCard from "@/components/CompanionCard";
 import Searchinput from "@/components/Searchinput";
 import SubjectFilter from "@/components/SubjectFilter";
-import { getAllCompanions } from "@/lib/actions/companion.actions";
 import { getSubjectColor } from "@/lib/utils";
 import { auth } from "@clerk/nextjs/server";
 import { getAllCompanions, getBookmarkedCompanions } from "@/lib/actions/companion.actions";
