@@ -166,5 +166,6 @@ export const getBookmarkedCompanions = async (userId: string) => {
         .select("companions:companion_id (*)")
         .eq("user_id", userId);
     if (error) throw new Error(error.message);
-    return data.map(({ companions }) => companions);
+    return data.map(({ companions }) => companions as any);
 };
+

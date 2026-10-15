@@ -23,7 +23,7 @@ const ProfilePage = async () => {
        <section className="flex md:flex-row justify-between gap-4 flex-col items-center">
           <div className="flex gap-4 items-center">
               <Image src={user.imageUrl}
-                alt={user.firstName}
+                alt={user.firstName!}
                 width={110}
                 height={110}/>
 
@@ -70,8 +70,8 @@ const ProfilePage = async () => {
             </div>
           </div>
         </section>
-      <Accordion type="multiple"
-                  defaultValue="recent">
+      <Accordion 
+                  defaultValue={["recent"]}>
          <AccordionItem value="recent">
           <AccordionTrigger className="text-2xl font-bold">
             Recent Sessions
