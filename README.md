@@ -18,11 +18,12 @@ An AI-powered Learning Management System (LMS) and voice tutoring web applicatio
 
 ## 🛠️ Tech Stack
 
-- **Framework:** Next.js (App Router, Server Actions)
+- **Framework:** Next.js 
 - **Language:** TypeScript
 - **Styling:** Tailwind CSS
 - **UI Components:** Shadcn UI 
 - **Auth:** Clerk
+- **Database:** Supabase
 - **AI & Voice:** Vapi AI
 - **Deployment:** Vercel
 
