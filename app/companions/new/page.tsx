@@ -36,7 +36,7 @@ const NewCompanion = async () => {
             <h1>You reach your limit</h1>
             <p>You reach your companion limit. Upgrade to create more companions and premium features.</p>
         
-          <Link href="/subcription"
+          <Link href="/subscription"
                 className="btn-primary w-full justify-center">
                   Upgrade My Plan
           </Link>
